@@ -13,3 +13,46 @@ Người dùng có thể đăng ký, đăng nhập, đăng xuất và xem thông
 - [dotenv](https://www.npmjs.com/package/dotenv) – Quản lý biến môi trường  
 
 ## 📂 Cấu trúc thư mục
+.
+├── config
+│   ├── db.js            # Kết nối MongoDB
+│   └── swagger.js       # Cấu hình Swagger UI
+├── controllers
+│   ├── authController.js
+│   └── userController.js
+├── middleware
+│   └── auth.js          # Middleware xác thực người dùng
+├── models
+│   └── User.js
+├── routes
+│   ├── authRoutes.js
+│   └── userRoutes.js
+├── views
+│   ├── login.ejs
+│   ├── register.ejs
+│   └── profile.ejs
+├── public
+│   ├── css/
+│   ├── js/
+├── .env                 # Biến môi trường
+├── .gitignore
+├── package.json
+└── server.js            # Entry point của ứng dụng
+
+
+Auth Routes
+Method	URL	Mô tả
+GET	/auth/register	Hiển thị form đăng ký
+POST	/auth/register	Đăng ký người dùng mới
+GET	/auth/login	Hiển thị form đăng nhập
+POST	/auth/login	Đăng nhập người dùng
+GET	/auth/logout	Đăng xuất người dùng
+
+
+User Routes
+Method	URL	Mô tả
+GET	/user/profile	Xem thông tin profile
+
+📝 License
+
+MIT License
